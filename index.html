@@ -250,6 +250,8 @@
       </div>
     </footer>
 
+    <div class="modal-overlay"></div>
+    
     <section class="modal-feedback">
       <form class="modal-feedback__form">
         <label class="modal-feedback__label" for="name">Ваше имя:</label>
@@ -259,7 +261,13 @@
         <label class="modal-feedback__label" for="text">Текст письма:</label>
         <input class="modal-feedback__input" type="text" id="text">
         <button class="modal-feedback__btn btn">Отправить</button>
+        <span class="modal-feedback__close modal-close">X</span>
       </form>
+    </section>
+
+    <section class="modal-map">
+      <div class="modal-map__image" id="map"></div>
+      <span class="modal-map__close modal-close">X</span>
     </section>
 
   </body>
