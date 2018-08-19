@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
     <title>Каталог | HTML Academy: Техномарт</title>
   </head>
   <body>
     
     <header class="page-header">
       <div class="top-bar">
-        <div class="top-bar--left">
+        <div class="top-bar__left">
           <a class="page-logo page-logo--header" href="index.html">Техномарт</a>
           <form class="top-bar__search">
             <input type="text" placeholder="Поиск">
           </form>
         </div>
-        <div class="top-bar--right">
-          <a class="top-bar__favorites" href="#favorites">Закладки</a>
+        <div class="top-bar__right">
+          <a class="top-bar__bookmarks" href="#bookmarks">Закладки</a>
           <a class="top-bar__cart" href="#cart">Корзина</a>
           <a class="top-bar__order" href="#order">Оформить заказ</a>
         </div>
       </div>
       <div class="header-info">
-        <h1 class="page-title">Интернет-магазин строительных материалов и инструментов для ремонта <span class="visually-hidden"></span>«Техномарт»</span></h1>
+        <h1 class="page-title">Интернет-магазин строительных материалов и инструментов для ремонта <span class="visually-hidden">«Техномарт»</span></h1>
         <div class="header-contacts">
           <a class="header-contacts__tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
           <p class="header-contacts__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
@@ -53,21 +51,19 @@
 
     <main class="page-main">
 
-      <div class="breadcrumbs">
-        <ul class="breadcrumbs__list">
-          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
-          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="catalog.html">Каталог</a></li>
-          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="catalog.html#tools">Инструмент</a></li>
-          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="catalog.html#drills">Перфораторы</a></li>
-        </ul>
-      </div>
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="catalog.html">Каталог</a></li>
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="catalog.html#tools">Инструмент</a></li>
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="catalog.html#drills">Перфораторы</a></li>
+      </ul>
 
       <section class="catalog">
         
         <h2 class="catalog__title">Перфораторы</h2>
         
         <div class="catalog__filter filter">
-          <p class="filter__title">Фильтр:</p>
+          <h3 class="filter__title">Фильтр:</h3>
           <form class="filter__form" action="">
             <fieldset class="filter__fieldset"></fieldset>
           </form>
@@ -76,24 +72,24 @@
         <div class="catalog__catalog">
 
           <div class="catalog__sort sort">
-            <p class="sort__title">Сортировка</p>
+            <h3 class="sort__title">Сортировка</h3>
             <ul class="sort__list">
-              <li class="sort__item">По цене</li>
-              <li class="sort__item">По типу</li>
-              <li class="sort__item">По функционалу</li>
+              <li class="sort__item"><a class="sort__link" href="#sprice">По цене</a></li>
+              <li class="sort__item"><a class="sort__link" href="#stype">По типу</a></li>
+              <li class="sort__item"><a class="sort__link" href="#sfunction">По функционалу</a></li>
             </ul>
-            <div class="sort__btn">
-              <span class="sort__btn-up sort__btn-up--current"></span>
-              <span class="sort__btn-down"></span>
-            </div>
+            <ul class="sort__direction">
+              <li class="sort__btn"><a class="sort__btn sort__btn--up" href="#sup">По возрастанию</a></li>
+              <li class="sort__btn"><a class="sort__btn sort__btn--down" href="#sdown">По убыванию</a></li>
+            </ul>
           </div>
 
-          <div class="catalog__goods">
+          <div class="catalog__goods goods">
             <ul class="goods__list">
               <li class="goods__item">
                 <img class="goods__image" src="http://placehold.it/150x100" alt="">
                 <div class="goods__desc">
-                  <h3 class="goods__title">Перфоратор BOSCH BFG 3000</h3>
+                  <h4 class="goods__title">Перфоратор BOSCH BFG 3000</h4>
                   <p class="goods__price-old">22500 р.</p>
                   <p class="goods__price-new">15500 р.</p>
                 </div>
@@ -101,7 +97,7 @@
               <li class="goods__item">
                 <img class="goods__image" src="http://placehold.it/150x100" alt="">
                 <div class="goods__desc">
-                  <h3 class="goods__title">Перфоратор BOSCH BFG 6000</h3>
+                  <h4 class="goods__title">Перфоратор BOSCH BFG 6000</h4>
                   <p class="goods__price-old">30500 р.</p>
                   <p class="goods__price-new">25500 р.</p>
                 </div>
@@ -109,7 +105,7 @@
               <li class="goods__item goods__item--new">
                 <img class="goods__image" src="http://placehold.it/150x100" alt="">
                 <div class="goods__desc">
-                  <h3 class="goods__title">Перфоратор BOSCH BFG 2000</h3>
+                  <h4 class="goods__title">Перфоратор BOSCH BFG 2000</h4>
                   <!-- <p class="goods__price-old">15500 р.</p> -->
                   <p class="goods__price-new">12500 р.</p>
                 </div>
@@ -117,7 +113,7 @@
               <li class="goods__item">
                 <img class="goods__image" src="http://placehold.it/150x100" alt="">
                 <div class="goods__desc">
-                  <h3 class="goods__title">Перфоратор BOSCH BFG 3000</h3>
+                  <h4 class="goods__title">Перфоратор BOSCH BFG 3000</h4>
                   <p class="goods__price-old">22500 р.</p>
                   <p class="goods__price-new">15500 р.</p>
                 </div>
@@ -125,7 +121,7 @@
               <li class="goods__item goods__item--new">
                 <img class="goods__image" src="http://placehold.it/150x100" alt="">
                 <div class="goods__desc">
-                  <h3 class="goods__title">Перфоратор BOSCH BFG 6000</h3>
+                  <h4 class="goods__title">Перфоратор BOSCH BFG 6000</h4>
                   <p class="goods__price-old">30500 р.</p>
                   <p class="goods__price-new">25500 р.</p>
                 </div>
@@ -133,7 +129,7 @@
               <li class="goods__item">
                 <img class="goods__image" src="http://placehold.it/150x100" alt="">
                 <div class="goods__desc">
-                  <h3 class="goods__title">Перфоратор BOSCH BFG 2000</h3>
+                  <h4 class="goods__title">Перфоратор BOSCH BFG 2000</h4>
                   <!-- <p class="goods__price-old">15500 р.</p> -->
                   <p class="goods__price-new">12500 р.</p>
                 </div>
@@ -141,7 +137,7 @@
               <li class="goods__item goods__item--new">
                 <img class="goods__image" src="http://placehold.it/150x100" alt="">
                 <div class="goods__desc">
-                  <h3 class="goods__title">Перфоратор BOSCH BFG 3000</h3>
+                  <h4 class="goods__title">Перфоратор BOSCH BFG 3000</h4>
                   <p class="goods__price-old">22500 р.</p>
                   <p class="goods__price-new">15500 р.</p>
                 </div>
@@ -149,7 +145,7 @@
               <li class="goods__item">
                 <img class="goods__image" src="http://placehold.it/150x100" alt="">
                 <div class="goods__desc">
-                  <h3 class="goods__title">Перфоратор BOSCH BFG 6000</h3>
+                  <h4 class="goods__title">Перфоратор BOSCH BFG 6000</h4>
                   <p class="goods__price-old">30500 р.</p>
                   <p class="goods__price-new">25500 р.</p>
                 </div>
@@ -157,7 +153,7 @@
               <li class="goods__item">
                 <img class="goods__image" src="http://placehold.it/150x100" alt="">
                 <div class="goods__desc">
-                  <h3 class="goods__title">Перфоратор BOSCH BFG 2000</h3>
+                  <h4 class="goods__title">Перфоратор BOSCH BFG 2000</h4>
                   <!-- <p class="goods__price-old">15500 р.</p> -->
                   <p class="goods__price-new">12500 р.</p>
                 </div>
@@ -165,7 +161,7 @@
             </ul>
           </div>
 
-          <div class="catalog__pagination">
+          <div class="catalog__pagination pagination">
             <ul class="pagination__list">
               <li class="pagination__item"><a class="pagination__link pagination__link--current" href="">1</a></li>
               <li class="pagination__item"><a class="pagination__link" href="">2</a></li>
@@ -177,7 +173,7 @@
         </div>
 
         <div class="catalog__info">
-          <h2 class="catalog__title">Пара слов о перфораторах</h2>
+          <h3 class="catalog__title">Пара слов о перфораторах</h3>
           <p class="catalog__desc">Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
         </div>
 
@@ -188,7 +184,7 @@
     <footer class="page-footer">
       <div class="footer-top">
         <a class="page-logo page-logo--footer" href="index.html">Техномарт</a>
-        <nav class="second-nav">
+        <div class="second-nav">
           <ul class="second-nav__list">
             <li class="second-nav__item"><a class="second-nav__link" href="#company">Компания</a></li>
             <li class="second-nav__item"><a class="second-nav__link" href="#news">Новости</a></li>
@@ -196,41 +192,41 @@
             <li class="second-nav__item"><a class="second-nav__link" href="#delivery">Доставка</a></li>
             <li class="second-nav__item"><a class="second-nav__link" href="#contacts">Контакты</a></li>
           </ul>
-        </nav>
+        </div>
       </div>
       <div class="footer-info">
         <div class="footer-contacts">
           <p class="footer-contacts__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           <a class="footer-contacts__tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
         </div>
-        <nav class="promo-nav">
+        <div class="promo-nav">
           <ul class="promo-nav__list">
             <li class="promo-nav__item"><a class="promo-nav__link" href="#materials">Материалы</a></li>
             <li class="promo-nav__item"><a class="promo-nav__link" href="#technics">Техника</a></li>
             <li class="promo-nav__item"><a class="promo-nav__link" href="#tools">Инструменты</a></li>
             <li class="promo-nav__item"><a class="promo-nav__link" href="#specials">Спецпредложения</a></li>
           </ul>
-        </nav>
+        </div>
       </div>
       <div class="footer-bot">
         <div class="footer-bot__copyright">
-          <p class="copyright">© 2010–2017 Компания «Техномарт»<br>
+          <p class="copyright">© 2010–2017 Компания «Техномарт»
             Все права защищены</p>
         </div>
-        <div class="footer-bot__social social">
-          <ul class="social__list">
-            <li class="social__item"><a class="social__link" href="#vk">Вконтакте</a></li>
-            <li class="social__item"><a class="social__link" href="#fb">Фейсбук</a></li>
-            <li class="social__item"><a class="social__link" href="#in">Инстаграм</a></li>
+        <div class="footer-bot__socials socials">
+          <ul class="socials__list">
+            <li class="socials__item"><a class="socials__link" href="#vk">Вконтакте</a></li>
+            <li class="socials__item"><a class="socials__link" href="#fb">Фейсбук</a></li>
+            <li class="socials__item"><a class="socials__link" href="#in">Инстаграм</a></li>
           </ul>
         </div>
         <div class="footer-bot__feedback">
-          <p class="feedback">Обратная связь:<br>
+          <p class="feedback">Обратная связь:
             <a class="feedback__link" href="mail:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </p>
         </div>
         <div class="footer-bot__creator">
-            <p class="creator">Разработано —<br>
+            <p class="creator">Разработано —
               <a class="creator__link" href="htmlacademy.ru">htmlacademy.ru</a>
             </p>
           </div>

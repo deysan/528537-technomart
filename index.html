@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
   </head>
   <body>
     
     <header class="page-header">
       <div class="top-bar">
-        <div class="top-bar--left">
+        <div class="top-bar__left">
           <a class="page-logo page-logo--header">Техномарт</a>
           <form class="top-bar__search">
             <input type="text" placeholder="Поиск">
           </form>
         </div>
-        <div class="top-bar--right">
-          <a class="top-bar__favorites" href="#favorites">Закладки</a>
+        <div class="top-bar__right">
+          <a class="top-bar__bookmarks" href="#bookmarks">Закладки</a>
           <a class="top-bar__cart" href="#cart">Корзина</a>
           <a class="top-bar__order" href="#order">Оформить заказ</a>
         </div>
       </div>
       <div class="header-info">
-        <h1 class="page-title">Интернет-магазин строительных материалов и инструментов для ремонта <span class="visually-hidden"></span>«Техномарт»</span></h1>
+        <h1 class="page-title">Интернет-магазин строительных материалов и инструментов для ремонта <span class="visually-hidden">«Техномарт»</span></h1>
         <div class="header-contacts">
           <a class="header-contacts__tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
           <p class="header-contacts__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
@@ -80,9 +78,9 @@
                 <p class="promo-slider__text">Настоящие мужские игрушки!</p>
                 <a class="promo-slider__link btn" href="catalog.html">Открыть каталог</a>
               </li> -->
+              <button class="promo-slider__btn-back">Назад</button>
+              <button class="promo-slider__btn-next">Вперед</button>
             </ul>
-            <button class="promo-slider__btn-back">Назад</button>
-            <button class="promo-slider__btn-next">Вперед</button>
           </li>
           <li class="promo__item promo__item--small">
             <h3 class="promo__title">Скидки 50%</h3>
@@ -183,7 +181,7 @@
           <h2 class="section__title">Компания «Техномарт»</h2>
           <p class="section__text">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
           <p class="section__text">Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями:</p>
-          <ul class="partners__list">
+          <ul class="partners">
             <li class="partners__item">Деловые линии</li>
             <li class="partners__item">Автотрейдинг</li>
             <li class="partners__item">ЖелДорЭкспедиция</li>
@@ -193,7 +191,7 @@
         <div class="contacts">
           <h2 class="section__title">Контакты</h2>
           <p class="section__text">Вы можете забрать товар сами, заехав в наш офис:</p>
-          <a class="contacts__map" href="#map"><img src="http://placehold.it/150x100" alt=""></a>
+          <a class="contacts__map" href="#map"><img id="map" src="http://placehold.it/150x100" alt=""></a>
           <a class="contacts__form btn" href="#form">Заблудились? Напишите нам!</a>
         </div>
       </section>
@@ -203,7 +201,7 @@
     <footer class="page-footer">
       <div class="footer-top">
         <a class="page-logo page-logo--footer">Техномарт</a>
-        <nav class="second-nav">
+        <div class="second-nav">
           <ul class="second-nav__list">
             <li class="second-nav__item"><a class="second-nav__link" href="#company">Компания</a></li>
             <li class="second-nav__item"><a class="second-nav__link" href="#news">Новости</a></li>
@@ -211,41 +209,41 @@
             <li class="second-nav__item"><a class="second-nav__link" href="#delivery">Доставка</a></li>
             <li class="second-nav__item"><a class="second-nav__link" href="#contacts">Контакты</a></li>
           </ul>
-        </nav>
+        </div>
       </div>
       <div class="footer-info">
         <div class="footer-contacts">
           <p class="footer-contacts__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           <a class="footer-contacts__tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
         </div>
-        <nav class="promo-nav">
+        <div class="promo-nav">
           <ul class="promo-nav__list">
             <li class="promo-nav__item"><a class="promo-nav__link" href="#materials">Материалы</a></li>
             <li class="promo-nav__item"><a class="promo-nav__link" href="#technics">Техника</a></li>
             <li class="promo-nav__item"><a class="promo-nav__link" href="#tools">Инструменты</a></li>
             <li class="promo-nav__item"><a class="promo-nav__link" href="#specials">Спецпредложения</a></li>
           </ul>
-        </nav>
+        </div>
       </div>
       <div class="footer-bot">
         <div class="footer-bot__copyright">
-          <p class="copyright">© 2010–2017 Компания «Техномарт»<br>
+          <p class="copyright">© 2010–2017 Компания «Техномарт»
             Все права защищены</p>
         </div>
-        <div class="footer-bot__social">
-          <ul class="social__list">
-            <li class="social__item"><a class="social__link" href="#vk">Вконтакте</a></li>
-            <li class="social__item"><a class="social__link" href="#fb">Фейсбук</a></li>
-            <li class="social__item"><a class="social__link" href="#in">Инстаграм</a></li>
+        <div class="footer-bot__socials socials">
+          <ul class="socials__list">
+            <li class="socials__item"><a class="socials__link" href="#vk">Вконтакте</a></li>
+            <li class="socials__item"><a class="socials__link" href="#fb">Фейсбук</a></li>
+            <li class="socials__item"><a class="socials__link" href="#in">Инстаграм</a></li>
           </ul>
         </div>
         <div class="footer-bot__feedback">
-          <p class="feedback">Обратная связь:<br>
+          <p class="feedback">Обратная связь:
             <a class="feedback__link" href="mail:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </p>
         </div>
         <div class="footer-bot__creator">
-            <p class="creator">Разработано —<br>
+            <p class="creator">Разработано —
               <a class="creator__link" href="htmlacademy.ru">htmlacademy.ru</a>
             </p>
           </div>
