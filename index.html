@@ -10,8 +10,8 @@
       <div class="top-bar">
         <div class="top-bar__left">
           <a class="page-logo page-logo--header">Техномарт</a>
-          <form class="top-bar__search">
-            <input type="text" placeholder="Поиск">
+          <form class="top-bar__search" method="get" action="https://echo.htmlacademy.ru">
+            <input type="search" name="search" placeholder="Поиск" aria-label="Поиск товара">
           </form>
         </div>
         <div class="top-bar__right">
@@ -22,9 +22,9 @@
       </div>
       <div class="header-info">
         <h1 class="page-title">Интернет-магазин строительных материалов и инструментов для ремонта <span class="visually-hidden">«Техномарт»</span></h1>
-        <div class="header-contacts">
-          <a class="header-contacts__tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
-          <p class="header-contacts__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        <div class="header-contacts" aria-label="Контакты">
+          <a class="header-contacts__tel" href="tel:+78125550555" aria-label="Контактный телефон">+7 (812) 555-05-55</a>
+          <p class="header-contacts__address" aria-label="Контактный адрес">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <ul class="user-nav">
           <li class="user-nav__login"><a class="user-nav__link" href="#login">Войти</a></li>
@@ -36,7 +36,7 @@
           </ul> -->
         </ul>
       </div>
-      <nav class="main-nav">
+      <nav class="main-nav" aria-label="Главное меню сайта">
         <ul class="main-nav__list">
           <li class="main-nav__item"><a class="main-nav__link" href="#index">Главная</a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="#company">Компания</a></li>
@@ -247,30 +247,33 @@
     <div class="modal-overlay"></div>
 
     <section class="modal-cart">
-      <h2 class="modal-cart__title">Товар добавлен в корзину!</h2>
+      <h2 class="modal-cart__title">Оформление и покупка товара</h2>
+      <h3 class="modal-cart__text">Товар добавлен в корзину!</h3>
       <div class="modal-cart__actions">
         <a class="modal-cart__order btn" href="#order">Оформить заказ</a>
         <a class="modal-cart__continue btn" href="catalog.html">Продолжить покупки</a>
       </div>
-      <span class="modal-cart__close modal-close">X</span>
+      <button class="modal-cart__close modal-close" type="button">Закрыть</button>
     </section>
 
     <section class="modal-feedback">
-      <form class="modal-feedback__form" action="https://echo.htmlacademy.ru" method="post">
+      <h2 class="modal-feedback__title visually-hidden">Обратная связь</h2>
+      <form class="modal-feedback__form"  method="post" action="https://echo.htmlacademy.ru"> 
         <label class="modal-feedback__label" for="name">Ваше имя:</label>
-        <input class="modal-feedback__input" type="text" id="name">
+        <input class="modal-feedback__input" type="text" id="name" name="name" placeholder="Имя Фамилия" required>
         <label class="modal-feedback__label" for="email">Ваш e-mail:</label>
-        <input class="modal-feedback__input" type="text" id="email">
+        <input class="modal-feedback__input" type="email" id="email" name="email" placeholder="email@example.com" required>
         <label class="modal-feedback__label" for="text">Текст письма:</label>
-        <textarea class="modal-feedback__input" type="text" id="text"></textarea>
+        <textarea class="modal-feedback__input" type="text" id="text" name="text" placeholder="В свободной форме" required></textarea>
         <input class="modal-feedback__btn btn" type="submit" value="Отправить">
-        <span class="modal-feedback__close modal-close">X</span>
+        <button class="modal-feedback__close modal-close" type="button">Закрыть</button>
       </form>
     </section>
 
     <section class="modal-map">
+      <h2 class="modal-map__title visually-hidden">Карта расположения офиса «Техномарт»</h2>
       <div class="modal-map__image" id="map"></div>
-      <span class="modal-map__close modal-close">X</span>
+      <button class="modal-map__close modal-close" type="button">Закрыть</button>
     </section>
 
   </body>

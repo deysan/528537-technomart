@@ -10,8 +10,9 @@
       <div class="top-bar">
         <div class="top-bar__left">
           <a class="page-logo page-logo--header" href="index.html">Техномарт</a>
-          <form class="top-bar__search">
-            <input type="text" placeholder="Поиск">
+          <form class="top-bar__search" method="get"
+          action="https://echo.htmlacademy.ru">
+            <input type="search" name="search" placeholder="Поиск" aria-label="Поиск товара">
           </form>
         </div>
         <div class="top-bar__right">
@@ -22,9 +23,9 @@
       </div>
       <div class="header-info">
         <h1 class="page-title">Интернет-магазин строительных материалов и инструментов для ремонта <span class="visually-hidden">«Техномарт»</span></h1>
-        <div class="header-contacts">
-          <a class="header-contacts__tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
-          <p class="header-contacts__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        <div class="header-contacts" aria-label="Контакты">
+          <a class="header-contacts__tel" href="tel:+78125550555" aria-label="Контактный телефон">+7 (812) 555-05-55</a>
+          <p class="header-contacts__address" aria-label="Контактный адрес">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <ul class="user-nav">
           <!-- <li class="user-nav__login"><a class="user-nav__link" href="#login">Войти</a></li> -->
@@ -36,7 +37,7 @@
           </ul>
         </ul>
       </div>
-      <nav class="main-nav">
+      <nav class="main-nav" aria-label="Главное меню сайта">
         <ul class="main-nav__list">
           <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="#company">Компания</a></li>
@@ -51,7 +52,7 @@
 
     <main class="page-main">
 
-      <ul class="breadcrumbs">
+      <ul class="breadcrumbs" aria-label="Хлебные крошки">
         <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
         <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="catalog.html">Каталог</a></li>
         <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="catalog.html#tools">Инструмент</a></li>
@@ -64,8 +65,32 @@
         
         <div class="catalog__filter filter">
           <h3 class="filter__title">Фильтр:</h3>
-          <form class="filter__form" action="">
-            <fieldset class="filter__fieldset"></fieldset>
+          <form class="filter__form" method="get" action="https://echo.htmlacademy.ru" oninput="prices.value=price.value">
+            
+            <fieldset class="filter__fieldset">
+              <legend class="filter__legend">Цена:</legend>
+              <!-- <input type="range" name="price" min="0" max="35000" step="1000" value="0"> -->
+              <input type="range" name="price" min="0" max="35000" step="1000" value="30000">
+              <output name="prices">30000</output>
+            </fieldset>
+            
+            <fieldset class="filter__fieldset">
+              <legend class="filter__legend">Производители:</legend>
+              <label class="filter__label-check" for="bosch"><input class="filter__label-input" type="checkbox" name="brand" value="bosch" id="bosch" checked>Bosch</label>
+              <label class="filter__label-check" for="interskol"><input class="filter__label-input" type="checkbox" name="brand" value="interskol" id="interskol">Интерскол</label>
+              <label class="filter__label-check" for="makita"><input class="filter__label-input" type="checkbox" name="brand" value="makita" id="makita" checked>Makita</label>
+              <label class="filter__label-check" for="dewalt"><input class="filter__label-input" type="checkbox" name="brand" value="dewalt" id="dewalt">Dewalt</label>
+              <label class="filter__label-check" for="hitachi"><input class="filter__label-input" type="checkbox" name="brand" value="hitachi" id="hitachi">Hitachi</label>
+            </fieldset>
+            
+            <fieldset class="filter__fieldset">
+              <legend class="filter__legend">Питание:</legend>
+              <label class="filter__label-radio" for="battery"><input class="filter__label-input" type="radio" name="power" value="battery" id="battery" checked>Аккумуляторные</label>
+              <label class="filter__label-radio" for="network"><input class="filter__label-input" type="radio" name="power" value="network" id="network">Сетевые</label>
+            </fieldset>
+
+            <button class="filter__btn btn" type="submit">Показать</button>
+
           </form>
         </div>
 
@@ -218,12 +243,13 @@
     <div class="modal-overlay"></div>
 
     <section class="modal-cart">
-      <h2 class="modal-cart__title">Товар добавлен в корзину!</h2>
+      <h2 class="modal-cart__title">Оформление и покупка товара</h2>
+      <h3 class="modal-cart__text">Товар добавлен в корзину!</h3>
       <div class="modal-cart__actions">
         <a class="modal-cart__order btn" href="#order">Оформить заказ</a>
         <a class="modal-cart__continue btn" href="catalog.html">Продолжить покупки</a>
       </div>
-      <span class="modal-cart__close modal-close">X</span>
+      <button class="modal-cart__close modal-close" type="button">Закрыть</button>
     </section>
 
   </body>
