@@ -59,7 +59,7 @@
         <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="catalog.html#drills">Перфораторы</a></li>
       </ul>
 
-      <section class="catalog">
+      <section class="catalog" aria-label="Каталог товаров">
         
         <h2 class="catalog__title">Перфораторы</h2>
         
@@ -69,24 +69,36 @@
             
             <fieldset class="filter__fieldset">
               <legend class="filter__legend">Цена:</legend>
-              <!-- <input type="range" name="price" min="0" max="35000" step="1000" value="0"> -->
-              <input type="range" name="price" min="0" max="35000" step="1000" value="30000">
-              <output name="prices">30000</output>
+              <div class="filter__range"></div>
+              <label class="filter__label-range" for="min-price"><span class="visually-hidden">Минимальная цена</span>
+                <input class="filter__input-range" type="text" name="min-price" value="0" id="min-price">
+              </label>
+                <span>&nbsp;&ndash;&nbsp;</span>
+              <label class="filter__label-range" for="max-price"><span class="visually-hidden">Максимальная цена</span>
+                <input class="filter__input-range" type="text" name="max-price" value="30000" id="max-price">
+              </label>
             </fieldset>
             
             <fieldset class="filter__fieldset">
               <legend class="filter__legend">Производители:</legend>
-              <label class="filter__label-check" for="bosch"><input class="filter__label-input" type="checkbox" name="brand" value="bosch" id="bosch" checked>Bosch</label>
-              <label class="filter__label-check" for="interskol"><input class="filter__label-input" type="checkbox" name="brand" value="interskol" id="interskol">Интерскол</label>
-              <label class="filter__label-check" for="makita"><input class="filter__label-input" type="checkbox" name="brand" value="makita" id="makita" checked>Makita</label>
-              <label class="filter__label-check" for="dewalt"><input class="filter__label-input" type="checkbox" name="brand" value="dewalt" id="dewalt">Dewalt</label>
-              <label class="filter__label-check" for="hitachi"><input class="filter__label-input" type="checkbox" name="brand" value="hitachi" id="hitachi">Hitachi</label>
+              <label class="filter__label-check" for="bosch">
+                <input class="filter__label-input" type="checkbox" name="brand" value="bosch" id="bosch" checked>Bosch</label>
+              <label class="filter__label-check" for="interskol">
+                <input class="filter__label-input" type="checkbox" name="brand" value="interskol" id="interskol">Интерскол</label>
+              <label class="filter__label-check" for="makita">
+                <input class="filter__label-input" type="checkbox" name="brand" value="makita" id="makita" checked>Makita</label>
+              <label class="filter__label-check" for="dewalt">
+                <input class="filter__label-input" type="checkbox" name="brand" value="dewalt" id="dewalt">Dewalt</label>
+              <label class="filter__label-check" for="hitachi">
+                <input class="filter__label-input" type="checkbox" name="brand" value="hitachi" id="hitachi">Hitachi</label>
             </fieldset>
             
             <fieldset class="filter__fieldset">
               <legend class="filter__legend">Питание:</legend>
-              <label class="filter__label-radio" for="battery"><input class="filter__label-input" type="radio" name="power" value="battery" id="battery" checked>Аккумуляторные</label>
-              <label class="filter__label-radio" for="network"><input class="filter__label-input" type="radio" name="power" value="network" id="network">Сетевые</label>
+              <label class="filter__label-radio" for="battery">
+                <input class="filter__label-input" type="radio" name="power" value="battery" id="battery" checked>Аккумуляторные</label>
+              <label class="filter__label-radio" for="network">
+                <input class="filter__label-input" type="radio" name="power" value="network" id="network">Сетевые</label>
             </fieldset>
 
             <button class="filter__btn btn" type="submit">Показать</button>
@@ -99,13 +111,13 @@
           <div class="catalog__sort sort">
             <h3 class="sort__title">Сортировка</h3>
             <ul class="sort__list">
-              <li class="sort__item"><a class="sort__link" href="#sprice">По цене</a></li>
-              <li class="sort__item"><a class="sort__link" href="#stype">По типу</a></li>
-              <li class="sort__item"><a class="sort__link" href="#sfunction">По функционалу</a></li>
+              <li class="sort__item"><a class="sort__link" href="#sort-price">По цене</a></li>
+              <li class="sort__item"><a class="sort__link" href="#sort-type">По типу</a></li>
+              <li class="sort__item"><a class="sort__link" href="#sort-function">По функционалу</a></li>
             </ul>
             <ul class="sort__direction">
-              <li class="sort__btn"><a class="sort__btn sort__btn--up" href="#sup">По возрастанию</a></li>
-              <li class="sort__btn"><a class="sort__btn sort__btn--down" href="#sdown">По убыванию</a></li>
+              <li class="sort__btn"><a class="sort__btn sort__btn--up" href="#sort-up">По возрастанию</a></li>
+              <li class="sort__btn"><a class="sort__btn sort__btn--down" href="#sort-down">По убыванию</a></li>
             </ul>
           </div>
 
@@ -243,7 +255,7 @@
     <div class="modal-overlay"></div>
 
     <section class="modal-cart">
-      <h2 class="modal-cart__title">Оформление и покупка товара</h2>
+      <h2 class="modal-cart__title visually-hidden">Оформление и покупка товара</h2>
       <h3 class="modal-cart__text">Товар добавлен в корзину!</h3>
       <div class="modal-cart__actions">
         <a class="modal-cart__order btn" href="#order">Оформить заказ</a>
