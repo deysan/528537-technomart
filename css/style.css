@@ -1,9 +1,164 @@
 body {
-  margin: 0;
   padding: 0;
-  font-family: "Cuprum", Arial, serif;
+  font-family: "Cuprum", Arial, sans-serif;
 }
 
 a {
   text-decoration: none;
+}
+
+.page-header {
+  background-color: #f4f7f9;
+}
+
+.page-logo {
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #ee3643;
+}
+
+.page-logo:hover,
+.page-logo:focus,
+.page-logo:active {
+  background-color: #ca2c37;
+}
+
+.page-title {
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: 400;
+  font-style: italic;
+  color: #ee3643;
+}
+
+.top-bar {
+  color: #ffffff;
+  background-color: #293449;
+}
+
+.top-bar__search input {
+  font-size: 17px;
+  line-height: 18px;
+  color: #ffffff;
+  background-color: #293449;
+  border: none;
+}
+
+.top-bar__search input:focus {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.top-bar__link {
+  font-size: 17px;
+  line-height: 18px;
+  color:#ffffff;
+  background-color: #293449;
+}
+
+.top-bar__link:hover,
+.top-bar__link:focus {
+  background-color: #212a3a;
+}
+.top-bar__link:active {
+  opacity: 0.5;
+}
+
+.top-bar__link--order {
+  background-color: #63a63e;
+}
+
+.top-bar__link--order:hover,
+.top-bar__link--order:focus {
+  background-color: #5fbb2d;
+}
+.top-bar__link--order:active {
+  opacity: 0.5;
+}
+
+.header-contacts__tel {
+  font-size: 21px;
+  line-height: 21px;
+  color: #e9292a;
+  border: solid 3px #ffffff;
+}
+
+.header-contacts__address {
+  font-size: 14px;
+  line-height: 24px;
+  color: #32425c;
+}
+
+.user-nav {
+  padding: 0;
+  list-style: none;
+}
+
+.user-nav__link {
+  font-size: 21px;
+  line-height: 21px;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.user-nav__link:hover,
+.user-nav__link:focus {
+  color: #ee3643;
+}
+
+.user-nav__link:active {
+  color: #000000;
+  opacity: 0.3;
+}
+
+.user-nav__link--user:hover,
+.user-nav__link--user:focus {
+  color: #000000;
+}
+
+.user-nav__set {
+  padding: 0;
+  list-style: none;
+}
+
+.user-nav__link-set {
+  font-size: 16px;
+  line-height: 18px;
+  color: #32425c;
+  text-decoration: underline;
+}
+
+.user-nav__link-set:hover,
+.user-nav__link-set:focus {
+  color: #ee3643;
+}
+
+.user-nav__link-set:active {
+  color: #32425c;
+  opacity: 0.3;
+}
+
+.main-nav {
+  background-color: #32425c;
+}
+.main-nav__list {
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav__link {
+  font-size: 17px;
+  line-height: 17px;
+  color: #ffffff;
+}
+
+.main-nav__link:hover,
+.main-nav__link:focus {
+  background-color: #212a3a;
+}
+
+.main-nav__link:active {
+  opacity: 0.5;
 }
