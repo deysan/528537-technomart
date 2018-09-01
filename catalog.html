@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог | HTML Academy: Техномарт</title>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     
@@ -71,11 +74,11 @@
               <legend class="filter__legend">Цена:</legend>
               <div class="filter__range"></div>
               <label class="filter__label-range" for="min-price"><span class="visually-hidden">Минимальная цена</span>
-                <input class="filter__input-range" type="text" name="min-price" value="0" id="min-price">
+                <input class="filter__input-range" type="text" name="min-price" pattern="[0-9]+" value="0" d="min-price">
               </label>
                 <span>&nbsp;&ndash;&nbsp;</span>
               <label class="filter__label-range" for="max-price"><span class="visually-hidden">Максимальная цена</span>
-                <input class="filter__input-range" type="text" name="max-price" value="30000" id="max-price">
+                <input class="filter__input-range" type="text" name="max-price" pattern="[0-9]+" value="30000" id="max-price">
               </label>
             </fieldset>
             
