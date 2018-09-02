@@ -270,6 +270,7 @@ a {
 .section__title {
   font-size: 30px;
   line-height: 30px;
+  font-weight: 400;
   text-transform: uppercase;
   color: #32425c;
 }
@@ -309,4 +310,13 @@ a {
 .goods__price--new {
   color: #ffffff;
   background-color: #ee3643;
+}
+
+.brands__list {
+  padding: 0;
+  list-style: none;
+}
+
+.brands__item {
+  border: solid 1px #eaeaea;
 }
