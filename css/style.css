@@ -376,3 +376,89 @@ a {
   font-size: 13px;
   line-height: 24px;
 }
+
+.partners {
+  list-style: none;
+}
+
+.partners__item {
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.page-footer {
+  color: #ffffff;
+  background-color: #32425c;
+}
+
+.second-nav__list {
+  padding: 0;
+  list-style: none;
+}
+
+.second-nav__link {
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.promo-nav__list {
+  padding: 0;
+  list-style: none;
+}
+
+.promo-nav__link {
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffd180;
+}
+
+.second-nav__link:hover,
+.second-nav__link:focus,
+.promo-nav__link:hover,
+.promo-nav__link:focus {
+  text-decoration: underline;
+}
+
+.second-nav__link:active,
+.promo-nav__link:active {
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+.footer-contacts {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.footer-contacts__tel {
+  color: #ffffff;
+}
+
+.socials__list {
+  padding: 0;
+  list-style: none;
+}
+
+.footer-bot {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.feedback__link,
+.creator__link {
+  color: #ffd180;
+}
+
+.feedback__link:hover,
+.feedback__link:focus,
+.creator__link:hover,
+.creator__link:focus {
+  text-decoration: underline;
+}
+
+.feedback__link:active,
+.creator__link:active {
+  color: #ee3643;
+  text-decoration: none;
+}
