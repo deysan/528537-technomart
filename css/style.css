@@ -19,6 +19,23 @@ a {
   overflow: hidden;
 }
 
+.btn {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #ee3643;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #ca2c37;
+}
+
+.btn:active {
+  background-color: #ba2732;
+}
+
 .page-header {
   background-color: #f4f7f9;
 }
@@ -173,4 +190,75 @@ a {
 
 .main-nav__link:active {
   opacity: 0.5;
+}
+
+.promo {
+  color: #ffffff;
+}
+
+.promo__list {
+  padding: 0;
+  list-style: none;
+}
+
+.promo__item {
+  background-color: #808080;
+}
+
+.promo__item--orange {
+  background-color: #ffbf47;
+}
+
+.promo__item--blue {
+  background-color: #3bbce3;
+}
+
+.promo__item--purple {
+  background-color: #dc91d8;
+}
+
+.promo__item--green {
+  background-color: #8ed78f;
+}
+
+.promo__item--yellow {
+  background-color: #ffc047;
+}
+
+.promo__title {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.promo__link {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: rgba(0,0,0,0.1);
+}
+
+.promo__link:hover,
+.promo__link:focus {
+  background-color: rgba(0,0,0,0.2);
+}
+
+.promo__link:active {
+  background-color: rgba(0,0,0,0.3);
+}
+
+.promo-slider {
+  padding: 0;
+  list-style: none;
+}
+
+.promo-slider__title {
+  font-size: 36px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.promo-slider__text {
+  font-size: 18px;
+  line-height: 24px;
 }
