@@ -570,3 +570,45 @@ a {
 .pagination__link:active {
   border: solid 1px #ee3643;
 }
+
+.modal-cart__text {
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.modal-cart__actions {
+  background-color: #f1f1f1;
+}
+
+.modal-cart__continue {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.modal-cart__continue:hover,
+.modal-cart__continue:focus {
+  background-color: #ffffff;
+  border: solid 2px #ee3643;
+}
+
+.modal-feedback__label {
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.modal-feedback__input {
+  border: solid 2px #d7dcde;
+}
+
+.modal-feedback__input:hover {
+  border: solid 2px #b5b5b5;
+}
+
+.modal-feedback__input:active,
+.modal-feedback__input:focus {
+  border: solid 2px #ee3643;
+}
+
+.modal-feedback__actions {
+  background-color: #f1f1f1;
+}
