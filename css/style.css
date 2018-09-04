@@ -6,6 +6,12 @@ a {
   text-decoration: none;
 }
 
+.container {
+  width: 940px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
@@ -37,10 +43,15 @@ a {
 }
 
 .page-header {
+  padding-bottom: 60px;
   background-color: #f4f7f9;
 }
 
 .page-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
@@ -55,11 +66,16 @@ a {
 }
 
 .page-title {
+  width: 300px;
+  margin: 0;
+  padding: 0 40px;
   font-size: 16px;
   line-height: 23px;
   font-weight: 400;
   font-style: italic;
+  text-align: left;
   color: #ee3643;
+  box-sizing: border-box;
 }
 
 .top-bar {
@@ -67,7 +83,19 @@ a {
   background-color: #293449;
 }
 
+.top-bar__nav {
+  display: flex;
+  flex-direction: row;
+  height: 42px;
+}
+
+.top-bar__search {
+  flex-grow: 1;
+}
+
 .top-bar__search input {
+  width: 100%;
+  height: 100%;
   font-size: 17px;
   line-height: 18px;
   color: #ffffff;
@@ -81,6 +109,10 @@ a {
 }
 
 .top-bar__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
   font-size: 17px;
   line-height: 18px;
   color:#ffffff;
@@ -107,20 +139,42 @@ a {
   opacity: 0.5;
 }
 
+.header-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+
+.header-contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+}
+
 .header-contacts__tel {
+  display: inline-block;
+  width: 100%;
   font-size: 21px;
   line-height: 21px;
+  text-align: center;
   color: #e9292a;
   border: solid 3px #ffffff;
 }
 
 .header-contacts__address {
+  margin: 0;
   font-size: 14px;
   line-height: 24px;
+  text-align: center;
   color: #32425c;
 }
 
 .user-nav {
+  display: flex;
+  justify-content: right;
+  width: 300px;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -148,6 +202,8 @@ a {
 }
 
 .user-nav__set {
+  display: flex;
+  flex-direction: row;
   padding: 0;
   list-style: none;
 }
@@ -173,11 +229,16 @@ a {
   background-color: #32425c;
 }
 .main-nav__list {
+  display: flex;
+  justify-content: space-between;
   padding: 0;
+  margin: 0;
   list-style: none;
 }
 
 .main-nav__link {
+  display: inline-block;
+  padding: 20px 30px;
   font-size: 17px;
   line-height: 17px;
   color: #ffffff;
