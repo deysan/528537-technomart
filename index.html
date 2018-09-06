@@ -14,7 +14,7 @@
         <div class="top-bar__nav container">
           <a class="page-logo page-logo--header">Техномарт</a>
           <form class="top-bar__search" method="get" action="https://echo.htmlacademy.ru">
-            <input type="search" name="search" placeholder="Поиск" aria-label="Поиск товара">
+            <input class="top-bar__input" type="search" name="search" placeholder="Поиск" aria-label="Поиск товара">
           </form>
           <a class="top-bar__link top-bar__link--bookmarks" href="#bookmarks">Закладки</a>
           <a class="top-bar__link top-bar__link--cart" href="#cart">Корзина</a>
@@ -146,36 +146,38 @@
         </ul>
       </section>
 
-      <section class="section">
-        <div class="services container">
-          <header class="section__heading">
-            <h2 class="section__title section__title--services">Сервисы</h2>
+      <section class="section services">
+        <div class="section__wrapper">
+          <header class="section__heading section__heading--services">
+            <h2 class="section__title section__title--other">Сервисы</h2>
             <p class="section__text">Хороший интернет-магазин отличается от плохого не только ценами!<br>Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
           </header>
-          <ul class="services__list">
-            <li class="services__item">Доставка</li>
-            <li class="services__item">Гарантия</li>
-            <li class="services__item">Кредит</li>
-          </ul>
-          <div class="services__info">
-            <h3 class="services__title">Доставка</h3>
-            <p class="services__text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
-          </div>
-          <div class="services__info">
-            <h3 class="services__title">Гарантия</h3>
-            <p class="services__text">Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
-          </div>
-          <div class="services__info">
-            <h3 class="services__title">Кредит</h3>
-            <p class="services__text">Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
-            <button class="services__btn btn">Отправить заявку</button>
+          <div class="services__desc">
+            <ul class="services__list">
+              <li class="services__item">Доставка</li>
+              <li class="services__item">Гарантия</li>
+              <li class="services__item">Кредит</li>
+            </ul>
+            <div class="services__info">
+              <h3 class="services__title">Доставка</h3>
+              <p class="services__text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
+            </div>
+            <div class="services__info">
+              <h3 class="services__title">Гарантия</h3>
+              <p class="services__text">Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
+            </div>
+            <div class="services__info">
+              <h3 class="services__title">Кредит</h3>
+              <p class="services__text">Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
+              <button class="services__btn btn">Отправить заявку</button>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="section about container">
         <div class="about-us">
-          <h2 class="section__title">Компания «Техномарт»</h2>
+          <h2 class="section__title section__title--other">Компания «Техномарт»</h2>
           <p class="section__text">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
           <p class="section__text">Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями:</p>
           <ul class="partners">
@@ -186,7 +188,7 @@
           <a class="about-us__more btn" href="#company">Подробнее о компании</a>
         </div>
         <div class="contacts">
-          <h2 class="section__title">Контакты</h2>
+          <h2 class="section__title section__title--other">Контакты</h2>
           <p class="section__text">Вы можете забрать товар сами, заехав в наш офис:</p>
           <a class="contacts__map" href="#map"><img id="map" src="img/map-small.jpg" width="300" height="158" alt="Офис Техномарт"></a>
           <a class="contacts__form btn" href="#form">Заблудились? Напишите нам!</a>
@@ -261,8 +263,8 @@
       <h2 class="modal-feedback__title visually-hidden">Обратная связь</h2>
       <form class="modal-feedback__form"  method="post" action="https://echo.htmlacademy.ru"> 
         <label class="modal-feedback__label" for="name">Ваше имя:</label>
-        <input class="modal-feedback__input" type="text" id="name" name="name" placeholder="Имя Фамилия" required>
         <label class="modal-feedback__label" for="email">Ваш e-mail:</label>
+        <input class="modal-feedback__input" type="text" id="name" name="name" placeholder="Имя Фамилия" required>
         <input class="modal-feedback__input" type="email" id="email" name="email" placeholder="email@example.com" required>
         <label class="modal-feedback__label" for="text">Текст письма:</label>
         <textarea class="modal-feedback__input" type="text" id="text" name="text" placeholder="В свободной форме" required></textarea>
