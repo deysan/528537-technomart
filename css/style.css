@@ -6,13 +6,20 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   width: 940px;
   padding: 0 10px;
   margin: 0 auto;
 }
 
-.visually-hidden:not(:focus):not(:active) {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -507,10 +514,6 @@ a {
 
 .promo-slider__btn--next:active {
   
-}
-
-.promo-slider__input {
-  display: none;
 }
 
 .promo-slider__controls {
