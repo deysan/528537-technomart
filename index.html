@@ -69,24 +69,30 @@
           </div>
         </div>
         <div class="promo__goods">
-          <li class="promo__item promo__item--big">
-            <ul class="promo-slider">
+          <div class="promo-slider promo__item promo__item--big">
+            <input class="promo-slider__input" type="radio" id="slide-1" name="toggle" checked>
+            <input class="promo-slider__input" type="radio" id="slide-2" name="toggle">
+            <div class="promo-slider__controls">
+              <label class="promo-slider__label promo-slider__label--1" for="slide-1">Первый</label>
+              <label class="promo-slider__label promo-slider__label--2" for="slide-2">Второй</label>
+            </div>
+            <ul class="promo-slider__list">
               <li class="promo-slider__item">
                 <h3 class="promo-slider__title">Дрели</h3>
                 <p class="promo-slider__text">Соседям на радость!</p>
-                <img class="promo-slider__image" src="img/promo-slider-1.jpg" width="620" height="266" alt="Дрели">
+                <!-- <img class="promo-slider__image" src="img/promo-slider-1.jpg" width="620" height="266" alt="Дрели"> -->
                 <a class="promo-slider__link btn" href="catalog.html">Открыть каталог</a>
               </li>
-              <!-- <li class="promo-slider__item">
+              <li class="promo-slider__item">
                 <h3 class="promo-slider__title">Перфораторы</h3>
                 <p class="promo-slider__text">Настоящие мужские игрушки!</p>
-                <img class="promo-slider__image" src="img/promo-slider-2.jpg" width="620" height="266" alt="Перфораторы">
+                <!-- <img class="promo-slider__image" src="img/promo-slider-2.jpg" width="620" height="266" alt="Перфораторы"> -->
                 <a class="promo-slider__link btn" href="catalog.html">Открыть каталог</a>
-              </li> -->
-              <button class="promo-slider__btn-back">Назад</button>
-              <button class="promo-slider__btn-next">Вперед</button>
+              </li>
+              <button class="promo-slider__btn promo-slider__btn--back" id="promo-slider__btn-back">Назад</button>
+              <button class="promo-slider__btn promo-slider__btn--next" id="promo-slider__btn-next">Вперед</button>
             </ul>
-          </li>
+          </div>
           <div class="promo__action">
             <div class="promo__item promo__item--small promo__item--green">
               <h3 class="promo__title">Скидки 50%</h3>
