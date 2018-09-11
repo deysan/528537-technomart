@@ -42,6 +42,7 @@ input[type="radio"].visually-hidden {
   color: #ffffff;
   background-color: #ee3643;
   box-sizing: border-box;
+  border: none;
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -1082,6 +1083,7 @@ input[type="radio"].visually-hidden {
 }
 
 .services {
+  /* padding: 30px 0; */
   background-color: #f4f7f9;
 }
 
@@ -1091,41 +1093,88 @@ input[type="radio"].visually-hidden {
 }
 
 .services__desc {
+  position: relative;
   display: flex;
 }
 
 .services__list {
-  padding: 0;
-  list-style: none;
+  display: flex;
+  flex-direction: column;
+  min-height: 280px;
 }
 
 .services__item {
+  width: 240px;
+  padding: 18px 22px;
   font-size: 21px;
   line-height: 30px;
   color: #ffffff;
   background-color: #32425c;
+  box-sizing: border-box;
 }
 
 .services__item:hover,
 .services__item:focus {
   background-color: #293449;
+  cursor: pointer;
 }
 
-.services__item:active {
-  color: #32425c;
-  background-color: #ffffff;
+.services__info {
+  display: none;
+  width: 100%;
+  padding-left: 80px;
+  /* padding-bottom: 140px; */
+}
+
+.services__info--delivery {
+  background-image: url(../img/service-delivery.png);
+  background-repeat: no-repeat;
+  background-position: 200px 0;
+}
+
+.services__info--guarantee {
+  background-image: url(../img/service-guarantee.png);
+  background-repeat: no-repeat;
+  background-position: 300px 0;
+}
+
+.services__info--credit {
+  background-image: url(../img/service-credit.png);
+  background-repeat: no-repeat;
+  background-position: 200px 0;
 }
 
 .services__title {
+  margin: 0;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
 }
 
 .services__text {
+  width: 400px;
+  margin: 25px 0;
   font-family: PT Sans;
   font-size: 13px;
   line-height: 24px;
+}
+
+#services-delivery:checked ~ .services__list .services__item--delivery,
+#services-guarantee:checked ~ .services__list .services__item--guarantee,
+#services-credit:checked ~ .services__list .services__item--credit {
+  color: #32425c;
+  background-color: #ffffff;
+}
+
+#services-delivery:checked ~ .services__info--delivery,
+#services-guarantee:checked ~ .services__info--guarantee,
+#services-credit:checked ~ .services__info--credit {
+  display: block;
+}
+
+.services__btn {
+  width: 195px;
+  padding: 10px 0;
 }
 
 .partners {
