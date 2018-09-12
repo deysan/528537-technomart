@@ -1476,11 +1476,17 @@ input[type="radio"].visually-hidden {
   flex-wrap: wrap;
 }
 
+.catalog__sort {
+  padding: 10px 15px;
+  background-color: #f7f3ec;
+}
+
 .catalog__catalog {
   width: 700px;
 }
 
 .catalog__goods {
+  margin-top: 30px;
   margin-bottom: 30px;
 }
 
@@ -1529,21 +1535,231 @@ input[type="radio"].visually-hidden {
 }
 
 .filter__title {
+  padding: 10px 15px;
   margin: 0;
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
+  background-color: #f7f3ec;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
 }
 
 .filter__fieldset {
+  position: relative;
   display: flex;
   flex-direction: column;
+  margin: 0;
+  margin-top: 15px;
+  padding: 0;
+  border: none;
+}
+
+.filter__fieldset::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: #e5e5e5;
+}
+
+.filter__fieldset:last-child::after {
+  display: none;
 }
 
 .filter__legend {
+  margin-top: 15px;
+  margin-bottom: 15px;
   font-size: 17px;
-  line-height: 30px;
+  line-height: 17px;
   font-weight: 700;
+}
+
+.filter__range {
+  position: relative;
+  height: 41px;
+  margin-bottom: 15px;
+  padding-top: 39px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #f7f3ec;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.filter__scale {
+  height: 2px;
+  background: #d7dcde;
+}
+
+.filter__scale-bar {
+  width: 80%;
+  height: 2px;
+  background: #00ca74;
+}
+
+.filter__toggle {
+  position: absolute;
+  top: 50%;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.filter__toggle--min {
+  left: 0;
+}
+
+.filter__toggle--min {
+  left: 70%;
+}
+
+.filter__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter__label-range {
+  /* display: inline-block; */
+}
+
+.filter__input-range {
+  width: 95px;
+  padding: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #f7f3ec;
+  border: none;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.filter__input-check,
+.filter__input-radio {
+  display: none;
+}
+
+.filter__label-check,
+.filter__label-radio {
+  position: relative;
+  margin-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.filter__label-check::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 23px;
+  height: 23px;
+  background-image: url(../img/icon-checkbox-off.svg);
+  background-repeat: no-repeat;
+  opacity: 0.7;
+}
+
+.filter__input-check:checked + .filter__label-check::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 27px;
+  height: 23px;
+  background-image: url(../img/icon-checkbox-on.svg);
+  background-repeat: no-repeat;
+  opacity: 0.7;
+}
+
+.filter__label-radio::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  border: 4px solid #c5c5c5;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  opacity: 0.7;
+}
+
+.filter__input-radio:checked + .filter__label-radio::after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 8px;
+  width: 9px;
+  height: 9px;
+  background-color: #c5c5c5;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  opacity: 0.7;
+}
+
+.filter__input-check:hover + .filter__label-check::before,
+.filter__input-check:hover + .filter__label-check::after,
+.filter__input-radio:hover + .filter__label-radio::before,
+.filter__input-radio:hover + .filter__label-radio::after {
+  opacity: 1;
+}
+
+.filter__btn {
+  width: 140px;
+  margin-top: 50px;
+  color: #000000;
+  background-color: transparent;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  cursor: pointer;
+}
+
+.filter__btn:hover,
+.filter__btn:focus {
+  background-color: transparent;
+  border: 1px solid #bdc6ca;
+}
+
+.filter__btn:active {
+  border: 1px solid #ee3643;
 }
 
 .sort {
@@ -1567,8 +1783,13 @@ input[type="radio"].visually-hidden {
 .sort__list,
 .sort__direction {
   display: flex;
+  padding: 0;
   margin: 0;
   list-style: none;
+}
+
+.sort__item {
+  margin-right: 20px;
 }
 
 .sort__link {
@@ -1588,13 +1809,53 @@ input[type="radio"].visually-hidden {
   border-bottom: none;
 }
 
+.sort__btn {
+  display: inline-block;
+	width: 0;
+	height: 0;
+  margin-left: 20px;
+  font-size: 0;
+  vertical-align: middle;
+}
+
+.sort__btn--up {
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 10px solid #c5c5c5;
+}
+
+.sort__btn--up:hover,
+.sort__btn--up:focus {
+	border-bottom: 10px solid #000000;
+}
+
+.sort__btn--down {
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 10px solid #c5c5c5;
+}
+
+.sort__btn--down:hover,
+.sort__btn--down:focus {
+	border-top: 10px solid #000000;
+}
+
+.sort__btn--active,
+.sort__btn--active:hover,
+.sort__btn--active:focus {
+  border-bottom: 10px solid #ee3643;
+}
+
 .pagination__list {
   display: flex;
   padding: 0;
   list-style: none;
+  font-family: PT Sans;
 }
 
 .pagination__link {
+  margin-right: 10px;
+  padding: 10px 15px;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -1608,6 +1869,18 @@ input[type="radio"].visually-hidden {
 }
 
 .pagination__link:active {
+  border: solid 1px #ee3643;
+}
+
+.pagination__link--current {
+  color: #ffffff;
+  background-color: #ee3643;
+  border: solid 1px #ee3643;
+}
+
+.pagination__link--current:hover,
+.pagination__link--current:focus,
+.pagination__link--current:active {
   border: solid 1px #ee3643;
 }
 

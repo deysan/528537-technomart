@@ -101,40 +101,48 @@
           
           <div class="catalog__filter filter">
             <h3 class="filter__title">Фильтр:</h3>
-            <form class="filter__form" method="get" action="https://echo.htmlacademy.ru" oninput="prices.value=price.value">
+            <form class="filter__form" method="get" action="https://echo.htmlacademy.ru">
               
               <fieldset class="filter__fieldset">
                 <legend class="filter__legend">Цена:</legend>
-                <div class="filter__range"></div>
-                <label class="filter__label-range" for="min-price"><span class="visually-hidden">Минимальная цена</span>
-                  <input class="filter__input-range" type="text" name="min-price" pattern="[0-9]+" value="0" d="min-price">
-                </label>
-                  <span>&nbsp;&ndash;&nbsp;</span>
-                <label class="filter__label-range" for="max-price"><span class="visually-hidden">Максимальная цена</span>
-                  <input class="filter__input-range" type="text" name="max-price" pattern="[0-9]+" value="30000" id="max-price">
-                </label>
+                <div class="filter__range">
+                  <div class="filter__scale">
+                    <div class="filter__scale-bar"></div>
+                  </div>
+                  <div class="filter__toggle filter__toggle--min"></div>
+                  <div class="filter__toggle filter__toggle--max"></div>
+                </div>
+                <div class="filter__price">
+                  <label class="filter__label-range" for="min-price"><span class="visually-hidden">Минимальная цена</span>
+                    <input class="filter__input-range" type="text" name="min-price" pattern="[0-9]+" value="0" d="min-price">
+                  </label>
+                    <span>&nbsp;&ndash;&nbsp;</span>
+                  <label class="filter__label-range" for="max-price"><span class="visually-hidden">Максимальная цена</span>
+                    <input class="filter__input-range" type="text" name="max-price" pattern="[0-9]+" value="30000" id="max-price">
+                  </label>
+                </div>
               </fieldset>
               
               <fieldset class="filter__fieldset">
                 <legend class="filter__legend">Производители:</legend>
-                <label class="filter__label-check" for="bosch">
-                  <input class="filter__label-input" type="checkbox" name="brand" value="bosch" id="bosch" checked>Bosch</label>
-                <label class="filter__label-check" for="interskol">
-                  <input class="filter__label-input" type="checkbox" name="brand" value="interskol" id="interskol">Интерскол</label>
-                <label class="filter__label-check" for="makita">
-                  <input class="filter__label-input" type="checkbox" name="brand" value="makita" id="makita" checked>Makita</label>
-                <label class="filter__label-check" for="dewalt">
-                  <input class="filter__label-input" type="checkbox" name="brand" value="dewalt" id="dewalt">Dewalt</label>
-                <label class="filter__label-check" for="hitachi">
-                  <input class="filter__label-input" type="checkbox" name="brand" value="hitachi" id="hitachi">Hitachi</label>
+                <input class="filter__input-check" type="checkbox" name="brand" value="bosch" id="bosch" checked>
+                <label class="filter__label-check" for="bosch">Bosch</label>
+                <input class="filter__input-check" type="checkbox" name="brand" value="interskol" id="interskol">
+                <label class="filter__label-check" for="interskol">Интерскол</label>
+                <input class="filter__input-check" type="checkbox" name="brand" value="makita" id="makita" checked>
+                <label class="filter__label-check" for="makita">Makita</label>
+                <input class="filter__input-check" type="checkbox" name="brand" value="dewalt" id="dewalt">
+                <label class="filter__label-check" for="dewalt">Dewalt</label>
+                <input class="filter__input-check" type="checkbox" name="brand" value="hitachi" id="hitachi">
+                <label class="filter__label-check" for="hitachi">Hitachi</label>
               </fieldset>
               
               <fieldset class="filter__fieldset">
                 <legend class="filter__legend">Питание:</legend>
-                <label class="filter__label-radio" for="battery">
-                  <input class="filter__label-input" type="radio" name="power" value="battery" id="battery" checked>Аккумуляторные</label>
-                <label class="filter__label-radio" for="network">
-                  <input class="filter__label-input" type="radio" name="power" value="network" id="network">Сетевые</label>
+                <input class="filter__input-radio" type="radio" name="power" value="battery" id="battery" checked>
+                <label class="filter__label-radio" for="battery">Аккумуляторные</label>
+                <input class="filter__input-radio" type="radio" name="power" value="network" id="network">
+                <label class="filter__label-radio" for="network">Сетевые</label>
               </fieldset>
 
               <button class="filter__btn btn" type="submit">Показать</button>
@@ -152,8 +160,8 @@
                 <li class="sort__item"><a class="sort__link" href="#sort-function">По функционалу</a></li>
               </ul>
               <ul class="sort__direction">
-                <li class="sort__btn"><a class="sort__btn sort__btn--up" href="#sort-up">По возрастанию</a></li>
-                <li class="sort__btn"><a class="sort__btn sort__btn--down" href="#sort-down">По убыванию</a></li>
+                <li class="sort__btns"><a class="sort__btn sort__btn--up sort__btn--active" href="#sort-up">По возрастанию</a></li>
+                <li class="sort__btns"><a class="sort__btn sort__btn--down" href="#sort-down">По убыванию</a></li>
               </ul>
             </div>
 
@@ -254,10 +262,10 @@
 
             <div class="catalog__pagination pagination">
               <ul class="pagination__list">
-                <li class="pagination__item"><a class="pagination__link pagination__link--current" href="">1</a></li>
-                <li class="pagination__item"><a class="pagination__link" href="">2</a></li>
-                <li class="pagination__item"><a class="pagination__link" href="">3</a></li>
-                <li class="pagination__item"><a class="pagination__link pagination__link--next" href="">Следующая</a></li>
+                <li class="pagination__item"><a class="pagination__link pagination__link--current" href="#1">1</a></li>
+                <li class="pagination__item"><a class="pagination__link" href="#2">2</a></li>
+                <li class="pagination__item"><a class="pagination__link" href="#3">3</a></li>
+                <li class="pagination__item"><a class="pagination__link pagination__link--next" href="#next">Следующая</a></li>
               </ul>
             </div>
 
