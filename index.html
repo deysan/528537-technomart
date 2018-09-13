@@ -316,12 +316,16 @@
     <section class="modal-feedback">
       <h2 class="modal-feedback__title visually-hidden">Обратная связь</h2>
       <form class="modal-feedback__form"  method="post" action="https://echo.htmlacademy.ru"> 
-        <label class="modal-feedback__label" for="name">Ваше имя:</label>
-        <label class="modal-feedback__label" for="email">Ваш e-mail:</label>
-        <input class="modal-feedback__input" type="text" id="name" name="name" placeholder="Имя Фамилия" required>
-        <input class="modal-feedback__input" type="email" id="email" name="email" placeholder="email@example.com" required>
-        <label class="modal-feedback__label" for="text">Текст письма:</label>
-        <textarea class="modal-feedback__input" type="text" id="text" name="text" placeholder="В свободной форме" required></textarea>
+        <div class="modal-feedback__group">
+          <label class="modal-feedback__label" for="name">Ваше имя:
+            <input class="modal-feedback__input" type="text" id="name" name="name" placeholder="Имя Фамилия" required></label>
+          <label class="modal-feedback__label" for="email">Ваш e-mail:
+            <input class="modal-feedback__input" type="email" id="email" name="email" placeholder="email@example.com" required></label>
+        </div>
+        <div class="modal-feedback__group">
+          <label class="modal-feedback__label" for="text">Текст письма:</label>
+          <textarea class="modal-feedback__textarea" type="text" id="text" name="text" placeholder="В свободной форме" required></textarea>
+        </div>
         <div class="modal-feedback__actions">
           <input class="modal-feedback__btn btn" type="submit" value="Отправить">
         </div>
