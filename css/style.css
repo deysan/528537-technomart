@@ -521,7 +521,7 @@ input[type="radio"].visually-hidden {
   justify-content: space-around;
   flex-wrap: wrap;
   min-height: 60px;
-  padding: 0 10px;
+  padding: 0 20px;
   margin: 0;
   list-style: none;
   background-color: #32425c;
