@@ -290,6 +290,7 @@ input[type="radio"].visually-hidden {
   font-size: 21px;
   line-height: 21px;
   text-align: center;
+  vertical-align: middle;
   color: #e9292a;
   border: solid 3px #ffffff;
   box-sizing: border-box;
@@ -343,6 +344,7 @@ input[type="radio"].visually-hidden {
   font-size: 21px;
   line-height: 21px;
   color: #000000;
+  vertical-align: middle;
   background-color: #ffffff;
 }
 
@@ -473,6 +475,7 @@ input[type="radio"].visually-hidden {
   position: relative;
   display: inline-block;
   padding: 6px 16px;
+  vertical-align: middle;
 }
 
 .user-nav__item::after {
@@ -534,6 +537,7 @@ input[type="radio"].visually-hidden {
   padding: 20px 30px;
   font-size: 17px;
   line-height: 17px;
+  vertical-align: middle;
   color: #ffffff;
 }
 
@@ -580,7 +584,7 @@ input[type="radio"].visually-hidden {
 
 .section__text {
   margin: 24px 0;
-  font-family: PT Sans;
+  font-family: "PT Sans", Arial, sans-serif;;
   font-size: 13px;
   line-height: 24px;
 }
@@ -717,6 +721,7 @@ input[type="radio"].visually-hidden {
   font-size: 14px;
   line-height: 18px;
   text-align: center;
+  vertical-align: middle;
   text-transform: uppercase;
   color: #ffffff;
   background-color: rgba(0,0,0,0.1);
@@ -862,6 +867,7 @@ input[type="radio"].visually-hidden {
   width: 10px;
   height: 10px;
   padding: 5px;
+  vertical-align: middle;
   cursor: pointer;
 }
 
@@ -917,8 +923,9 @@ input[type="radio"].visually-hidden {
   display: inline-block;
   width: 220px;
   margin-bottom: 20px;
-  font-family: PT Sans;
+  font-family: "PT Sans", Arial, sans-serif;;
   text-align: center;
+  vertical-align: middle;
   border: solid 1px #eaeaea;
   box-sizing: border-box;
 }
@@ -982,7 +989,7 @@ input[type="radio"].visually-hidden {
   color: #ffffff;
   font-size: 14px;
   line-height: 18px;
-  font-family: Cuprum;
+  font-family: "Cuprum", Arial, sans-serif;;
   text-transform: uppercase;
   border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -1222,7 +1229,7 @@ input[type="radio"].visually-hidden {
 .services__text {
   width: 400px;
   margin: 25px 0;
-  font-family: PT Sans;
+  font-family: "PT Sans", Arial, sans-serif;;
   font-size: 13px;
   line-height: 24px;
 }
@@ -1502,9 +1509,10 @@ input[type="radio"].visually-hidden {
 .breadcrumbs__link {
   display: inline-block;
   margin-right: 40px;
-  font-family: PT Sans;
+  font-family: "PT Sans", Arial, sans-serif;;
   font-size: 13px;
   line-height: 18px;
+  vertical-align: middle;
   text-transform: uppercase;
   color: #000000;
 }
@@ -1594,14 +1602,14 @@ input[type="radio"].visually-hidden {
 
 .catalog__desc {
   margin: 21px 0;
-  font-family: PT Sans;
+  font-family: "PT Sans", Arial, sans-serif;;
   font-size: 13px;
   line-height: 24px;
 }
 
 .filter {
   width: 220px;
-  font-family: PT Sans;
+  font-family: "PT Sans", Arial, sans-serif;;
   font-size: 15px;
   line-height: 20px;
   text-transform: uppercase;
@@ -1842,7 +1850,7 @@ input[type="radio"].visually-hidden {
 
 .sort {
   display: flex;
-  font-family: PT Sans;
+  font-family: "PT Sans", Arial, sans-serif;;
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
@@ -1932,7 +1940,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   padding: 0;
   list-style: none;
-  font-family: PT Sans;
+  font-family: "PT Sans", Arial, sans-serif;;
 }
 
 .pagination__link {
@@ -2124,7 +2132,7 @@ input[type="radio"].visually-hidden {
   width: 220px;
   margin-top: 10px;
   padding: 10px 15px;
-  font-family: PT Sans;
+  font-family: "PT Sans", Arial, sans-serif;;
   font-size: 13px;
   line-height: 13px;
   border: solid 2px #d7dcde;
@@ -2150,7 +2158,7 @@ input[type="radio"].visually-hidden {
   height: 100px;
   margin-top: 10px;
   padding: 10px 15px;
-  font-family: PT Sans;
+  font-family: "PT Sans", Arial, sans-serif;;
   font-size: 13px;
   line-height: 18px;
   border: solid 2px #d7dcde;
