@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -95,9 +96,9 @@
                 </div>
                 <a class="promo-slider__link btn" href="catalog.html">Открыть каталог</a>
               </li>
-              <button class="promo-slider__btn promo-slider__btn--back" id="promo-slider__btn-back">Назад</button>
-              <button class="promo-slider__btn promo-slider__btn--next" id="promo-slider__btn-next">Вперед</button>
             </ul>
+            <button class="promo-slider__btn promo-slider__btn--back">Назад</button>
+            <button class="promo-slider__btn promo-slider__btn--next">Вперед</button>
           </div>
           <div class="promo__action">
             <div class="promo__item promo__item--small promo__item--green">
@@ -225,7 +226,7 @@
         <div class="contacts">
           <h2 class="section__title section__title--other">Контакты</h2>
           <p class="section__text">Вы можете забрать товар сами, <br>заехав в наш офис:</p>
-          <a class="contacts__map" href="#map"><img id="map" src="img/map-small.jpg" width="300" height="158" alt="Офис Техномарт"></a>
+          <a class="contacts__map" href="#map"><img src="img/map-small.jpg" width="300" height="158" alt="Офис Техномарт"></a>
           <a class="contacts__form btn" href="#form">Заблудились? Напишите нам!</a>
         </div>
       </section>
@@ -305,7 +306,7 @@
         </div>
         <div class="modal-feedback__group">
           <label class="modal-feedback__label" for="text">Текст письма:</label>
-          <textarea class="modal-feedback__textarea" type="text" id="text" name="text" placeholder="В свободной форме" required></textarea>
+          <textarea class="modal-feedback__textarea" id="text" name="text" placeholder="В свободной форме" required></textarea>
         </div>
         <div class="modal-feedback__actions">
           <input class="modal-feedback__btn btn" type="submit" value="Отправить">
