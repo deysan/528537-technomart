@@ -395,53 +395,83 @@
 
     <section class="modal-map">
       <h2 class="modal-map__title visually-hidden">Карта расположения офиса «Техномарт»</h2>
-      <div class="modal-map__image" id="map"></div>
+      <div class="modal-map__image" id="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787253323!2d30.320858716385132!3d59.93871648187622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1537391478124" width="940" height="446" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
       <button class="modal-map__close modal-close" type="button">Закрыть</button>
     </section>
 
     <script>
-      var tobuy = document.querySelector(".goods__btn--buy");
+      var tobuy = document.querySelectorAll(".goods__btn--buy");
       var cart = document.querySelector(".modal-cart");
       var form = document.querySelector(".contacts__form");
       var feedback = document.querySelector(".modal-feedback");
       var map = document.querySelector(".contacts__map");
       var maps = document.querySelector(".modal-map");
-	    var overlay = document.querySelector(".modal-overlay");
-      var close = document.querySelector(".modal-close");
+      var overlay = document.querySelector(".modal-overlay");
+      var close = document.querySelectorAll(".modal-close");
       
-      tobuy.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        cart.classList.add("modal-show");
-        overlay.classList.add("modal-show");
-      });
+      if (tobuy,cart) {
+        for (var i = 0; i < tobuy.length; i++) {
+          tobuy[i].addEventListener("click", function (evt) {
+            evt.preventDefault();
+            cart.classList.add("modal-show");
+            overlay.classList.add("modal-show");
+          });
+        };
+        for (var i = 0; i < close.length; i++) {
+          close[i].addEventListener("click", function (evt) {
+            evt.preventDefault();
+            cart.classList.remove("modal-show");
+            overlay.classList.remove("modal-show");
+          });
+        };
+        overlay.addEventListener("click", function(event) {
+          event.preventDefault();
+          cart.classList.remove("modal-show");
+          overlay.classList.remove("modal-show");
+        });
+      }
+      
+      if (form,feedback) {
+        form.addEventListener("click", function (evt) {
+          evt.preventDefault();
+          feedback.classList.add("modal-show");
+          overlay.classList.add("modal-show");
+        });
+        for (var i = 0; i < close.length; i++) {
+          close[i].addEventListener("click", function (evt) {
+            evt.preventDefault();
+            feedback.classList.remove("modal-show");
+            overlay.classList.remove("modal-show");
+          });
+        };
+        overlay.addEventListener("click", function(event) {
+          event.preventDefault();
+          feedback.classList.remove("modal-show");
+          overlay.classList.remove("modal-show");
+        });
+      }
 
-      form.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        feedback.classList.add("modal-show");
-        overlay.classList.add("modal-show");
-      });
-
-      map.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        maps.classList.add("modal-show");
-        overlay.classList.add("modal-show");
-      });
-
-      close.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        cart.classList.remove("modal-show");
-        feedback.classList.remove("modal-show");
-        maps.classList.remove("modal-show");
-        overlay.classList.remove("modal-show");
-      });
-
-      overlay.addEventListener("click", function(event) {
-        event.preventDefault();
-        cart.classList.remove("modal-show");
-        feedback.classList.remove("modal-show");
-        maps.classList.remove("modal-show");
-        overlay.classList.remove("modal-show");
-      });
+      if (map,maps) {
+        map.addEventListener("click", function (evt) {
+          evt.preventDefault();
+          maps.classList.add("modal-show");
+          overlay.classList.add("modal-show");
+        });
+        for (var i = 0; i < close.length; i++) {
+          close[i].addEventListener("click", function (evt) {
+            evt.preventDefault();
+            maps.classList.remove("modal-show");
+            overlay.classList.remove("modal-show");
+          });
+        };
+        overlay.addEventListener("click", function(event) {
+          event.preventDefault();
+          maps.classList.remove("modal-show");
+          overlay.classList.remove("modal-show");
+        });
+      }
   
       window.addEventListener("keydown", function(event) {
         if (event.keyCode === 27) {
