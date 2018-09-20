@@ -141,6 +141,11 @@ input[type="radio"].visually-hidden {
   border: none;
 }
 
+.top-bar__input::placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+
 .top-bar__input:hover {
   background-color: #212a3a;
 }
@@ -274,21 +279,21 @@ input[type="radio"].visually-hidden {
   display: flex;
   justify-content: space-between;
   padding-top: 45px;
-  padding-bottom: 36px;
+  padding-bottom: 37px;
 }
 
 .header-contacts {
   width: 270px;
-  margin-right: 15px;
+  margin-right: 20px;
 }
 
 .header-contacts__tel {
   position: relative;
   display: inline-block;
   width: 100%;
+  height: 47px;
   padding: 10px;
-  padding-top: 11px;
-  padding-left: 28px;
+  padding-left: 30px;
   font-size: 21px;
   line-height: 21px;
   text-align: center;
@@ -302,7 +307,7 @@ input[type="radio"].visually-hidden {
   content: "";
   position: absolute;
   top: 50%;
-  left: 10px;
+  left: 12px;
   width: 19px;
   height: 19px;
   background-image: url(../img/icon-phone.svg);
@@ -322,7 +327,6 @@ input[type="radio"].visually-hidden {
 
 .header-contacts__address {
   margin: 0;
-  margin-right: 4px;
   padding-top: 3px;
   padding-bottom: 2px;
   font-size: 14px;
@@ -343,8 +347,8 @@ input[type="radio"].visually-hidden {
 .user-nav__link {
   position: relative;
   display: inline-block;
-  margin-left: 15px;
-  padding: 13px 23px;
+  margin-left: 10px;
+  padding: 12px 24px 13px;
   font-size: 21px;
   line-height: 21px;
   color: #000000;
@@ -354,16 +358,17 @@ input[type="radio"].visually-hidden {
 
 .user-nav__link--login {
   position: relative;
-  padding-left: 50px;
+  padding-left: 47px;
+  padding-right: 26px;
 }
 
 .user-nav__link--login::before {
   content: "";
   position: absolute;
   top: 50%;
-  left: 20px;
-  width: 19px;
-  height: 19px;
+  left: 14px;
+  width: 20px;
+  height: 17px;
   background-image: url(../img/icon-login.svg);
   background-repeat: no-repeat;
   transform: translateY(-50%);
@@ -371,7 +376,7 @@ input[type="radio"].visually-hidden {
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
-  opacity: 0.3;
+  opacity: 0.1;
 }
 
 .user-nav__link:hover,
@@ -402,6 +407,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   align-items: center;
   flex-grow: 1;
+  height: 47px;
   margin-left: 0;
   padding-left: 47px;
   padding-right: 0;
@@ -411,17 +417,12 @@ input[type="radio"].visually-hidden {
 .user-nav__link--user::before {
   content: "";
   position: absolute;
-  top: 50%;
-  left: 15px;
+  top: 15px;
+  left: 14px;
   width: 19px;
   height: 19px;
   background-image: url(../img/icon-user.svg);
   background-repeat: no-repeat;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   opacity: 0.3;
 }
 
@@ -439,25 +440,21 @@ input[type="radio"].visually-hidden {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 47px;
   margin-left: 0;
-  padding: 12px;
+  padding: 0;
   font-size: 0;
 }
 
 .user-nav__link--logout::after {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 15px;
   right: 10px;
   width: 21px;
   height: 17px;
   background-image: url(../img/icon-logout.svg);
   background-repeat: no-repeat;
-  transform: translateY(-50%); 
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   opacity: 0.3;
 }
 
@@ -478,8 +475,8 @@ input[type="radio"].visually-hidden {
 .user-nav__item {
   position: relative;
   display: inline-block;
-  padding: 6px 0;
-  padding-left: 18px;
+  padding-top: 2px;
+  padding-left: 19px;
   padding-right: 12px;
   vertical-align: middle;
 }
@@ -487,21 +484,20 @@ input[type="radio"].visually-hidden {
 .user-nav__item::after {
   content: "";
   position: absolute;
-  top: 50%;
-  right: -9px;
-  width: 5px;
-  height: 5px;
+  top: 10px;
+  right: -8px;
+  width: 4px;
+  height: 4px;
   background-color: #32425c;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
+}
+
+.user-nav__item:last-child {
+  padding-left: 16px;
 }
 
 .user-nav__item:last-child::after {
@@ -1638,7 +1634,8 @@ input[type="radio"].visually-hidden {
 
 .filter__fieldset {
   position: relative;
-  margin: 18px 0;
+  margin-top: 17px;
+  margin-bottom: 18px;
   padding: 0;
   border: none;
 }
@@ -1649,7 +1646,7 @@ input[type="radio"].visually-hidden {
 
 .filter__legend {
   width: 100%;
-  margin: 18px 0;
+  margin-bottom: 18px;
   font-size: 17px;
   line-height: 17px;
   font-weight: 700;
@@ -1749,7 +1746,7 @@ input[type="radio"].visually-hidden {
   margin-bottom: 14px;
   padding-top: 2px;
   padding-bottom: 4px;
-  padding-left: 35px;
+  padding-left: 33px;
   cursor: pointer;
 }
 
