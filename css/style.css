@@ -1312,6 +1312,10 @@ input[type="radio"].visually-hidden {
   justify-content: space-between;
 }
 
+.contacts .section__text {
+  width: 200px;
+}
+
 .contacts__map {
   margin-top: 5px;
   margin-bottom: 18px;
