@@ -253,8 +253,7 @@ input[type="radio"].visually-hidden {
 .top-bar__link--bookmark:hover::before,
 .top-bar__link--bookmark:focus::before,
 .top-bar__link--cart:hover::before,
-.top-bar__link--cart:focus::before,
-.top-bar__link--carts::before {
+.top-bar__link--cart:focus::before {
   opacity: 1;
 }
 
