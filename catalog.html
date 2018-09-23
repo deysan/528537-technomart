@@ -35,10 +35,18 @@
           <a class="header-contacts__tel" href="tel:+78125550555" aria-label="Контактный телефон">+7 (812) 555-05-55</a>
           <p class="header-contacts__address" aria-label="Контактный адрес">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
-        <ul class="user-nav">
-          <li class="user-nav__user">
-            <a class="user-nav__link user-nav__link--user" href="#user">Равшан Джамшутович</a>
-            <a class="user-nav__link user-nav__link--logout" href="#logout">Выйти</a>
+        <ul class="user-nav user-nav--open">
+          <li class="user-nav__list">
+            <ul class="user-nav__menu">
+              <li class="user-nav__user">
+                <a class="user-nav__link user-nav__link--user" href="#user">Равшан Джамшутович</a>
+              </li>
+              <li class="user-nav__logout">
+                <a class="user-nav__link user-nav__link--logout" href="#logout">Выйти</a>
+              </li>
+            </ul>
+          </li>
+          <li class="user-nav__list">
             <ul class="user-nav__set">
               <li class="user-nav__item">
                 <a class="user-nav__link-set" href="#orders">Мои заказы</a>
@@ -110,8 +118,8 @@
                   <div class="filter__scale">
                     <div class="filter__scale-bar"></div>
                   </div>
-                  <div class="filter__toggle filter__toggle--min"></div>
-                  <div class="filter__toggle filter__toggle--max"></div>
+                  <div class="filter__toggle filter__toggle--max" tabindex="0"></div>
+                  <div class="filter__toggle filter__toggle--min" tabindex="0"></div>
                 </div>
                 <div class="filter__price">
                   <label class="filter__label-range" for="min-price"><span class="visually-hidden">Минимальная цена</span>
@@ -126,24 +134,24 @@
               
               <fieldset class="filter__fieldset">
                 <legend class="filter__legend">Производители:</legend>
-                <input class="filter__input-check" type="checkbox" name="brand" value="bosch" id="bosch" checked>
-                <label class="filter__label-check" for="bosch">Bosch</label>
+                <input class="filter__input-check" type="checkbox" name="brand" value="bosch" id="bosch" checked disabled>
+                <label class="filter__label-check" for="bosch" tabindex="0">Bosch</label>
                 <input class="filter__input-check" type="checkbox" name="brand" value="interskol" id="interskol">
-                <label class="filter__label-check" for="interskol">Интерскол</label>
+                <label class="filter__label-check" for="interskol" tabindex="0">Интерскол</label>
                 <input class="filter__input-check" type="checkbox" name="brand" value="makita" id="makita" checked>
-                <label class="filter__label-check" for="makita">Makita</label>
+                <label class="filter__label-check" for="makita" tabindex="0">Makita</label>
                 <input class="filter__input-check" type="checkbox" name="brand" value="dewalt" id="dewalt">
-                <label class="filter__label-check" for="dewalt">Dewalt</label>
+                <label class="filter__label-check" for="dewalt" tabindex="0">Dewalt</label>
                 <input class="filter__input-check" type="checkbox" name="brand" value="hitachi" id="hitachi">
-                <label class="filter__label-check" for="hitachi">Hitachi</label>
+                <label class="filter__label-check" for="hitachi" tabindex="0">Hitachi</label>
               </fieldset>
               
               <fieldset class="filter__fieldset">
                 <legend class="filter__legend">Питание:</legend>
                 <input class="filter__input-radio" type="radio" name="power" value="battery" id="battery" checked>
-                <label class="filter__label-radio" for="battery">Аккумуляторные</label>
+                <label class="filter__label-radio" for="battery" tabindex="0">Аккумуляторные</label>
                 <input class="filter__input-radio" type="radio" name="power" value="network" id="network">
-                <label class="filter__label-radio" for="network">Сетевые</label>
+                <label class="filter__label-radio" for="network" tabindex="0">Сетевые</label>
               </fieldset>
 
               <button class="filter__btn btn" type="submit">Показать</button>
@@ -180,7 +188,7 @@
 
             <div class="catalog__goods goods">
               <ul class="goods__list">
-                <li class="goods__item goods__item--catalog">
+                <li class="goods__item goods__item--catalog" tabindex="0">
                   <div class="goods__actions">
                     <a href="#tobuy" class="goods__btn goods__btn--buy">Купить</a>
                     <a href="#tobookmark" class="goods__btn goods__btn--bookmark">В закладки</a>
@@ -190,7 +198,7 @@
                   <p class="goods__price goods__price--old">22500 р.</p>
                   <p class="goods__price goods__price--new">15500 р.</p>
                 </li>
-                <li class="goods__item goods__item--catalog">
+                <li class="goods__item goods__item--catalog" tabindex="0">
                   <div class="goods__actions">
                     <a href="#tobuy" class="goods__btn goods__btn--buy">Купить</a>
                     <a href="#tobookmark" class="goods__btn goods__btn--bookmark">В закладки</a>
@@ -200,7 +208,7 @@
                   <p class="goods__price goods__price--old">30500 р.</p>
                   <p class="goods__price goods__price--new">25500 р.</p>
                 </li>
-                <li class="goods__item goods__item--catalog goods__item--new">
+                <li class="goods__item goods__item--catalog goods__item--new" tabindex="0">
                   <div class="goods__actions">
                     <a href="#tobuy" class="goods__btn goods__btn--buy">Купить</a>
                     <a href="#tobookmark" class="goods__btn goods__btn--bookmark">В закладки</a>
@@ -210,7 +218,7 @@
                   <p class="goods__price goods__price--old">15500 р.</p>
                   <p class="goods__price goods__price--new">12500 р.</p>
                 </li>
-                <li class="goods__item goods__item--catalog">
+                <li class="goods__item goods__item--catalog" tabindex="0">
                   <div class="goods__actions">
                     <a href="#tobuy" class="goods__btn goods__btn--buy">Купить</a>
                     <a href="#tobookmark" class="goods__btn goods__btn--bookmark">В закладки</a>
@@ -220,7 +228,7 @@
                   <p class="goods__price goods__price--old">22500 р.</p>
                   <p class="goods__price goods__price--new">15500 р.</p>
                 </li>
-                <li class="goods__item goods__item--catalog goods__item--new">
+                <li class="goods__item goods__item--catalog goods__item--new" tabindex="0">
                   <div class="goods__actions">
                     <a href="#tobuy" class="goods__btn goods__btn--buy">Купить</a>
                     <a href="#tobookmark" class="goods__btn goods__btn--bookmark">В закладки</a>
@@ -230,7 +238,7 @@
                   <p class="goods__price goods__price--old">30500 р.</p>
                   <p class="goods__price goods__price--new">25500 р.</p>
                 </li>
-                <li class="goods__item goods__item--catalog">
+                <li class="goods__item goods__item--catalog" tabindex="0">
                   <div class="goods__actions">
                     <a href="#tobuy" class="goods__btn goods__btn--buy">Купить</a>
                     <a href="#tobookmark" class="goods__btn goods__btn--bookmark">В закладки</a>
@@ -240,7 +248,7 @@
                   <p class="goods__price goods__price--old">15500 р.</p>
                   <p class="goods__price goods__price--new">12500 р.</p>
                 </li>
-                <li class="goods__item goods__item--catalog goods__item--new">
+                <li class="goods__item goods__item--catalog goods__item--new" tabindex="0">
                   <div class="goods__actions">
                     <a href="#tobuy" class="goods__btn goods__btn--buy">Купить</a>
                     <a href="#tobookmark" class="goods__btn goods__btn--bookmark">В закладки</a>
@@ -250,7 +258,7 @@
                   <p class="goods__price goods__price--old">22500 р.</p>
                   <p class="goods__price goods__price--new">15500 р.</p>
                 </li>
-                <li class="goods__item goods__item--catalog">
+                <li class="goods__item goods__item--catalog" tabindex="0">
                   <div class="goods__actions">
                     <a href="#tobuy" class="goods__btn goods__btn--buy">Купить</a>
                     <a href="#tobookmark" class="goods__btn goods__btn--bookmark">В закладки</a>
@@ -260,7 +268,7 @@
                   <p class="goods__price goods__price--old">30500 р.</p>
                   <p class="goods__price goods__price--new">25500 р.</p>
                 </li>
-                <li class="goods__item goods__item--catalog">
+                <li class="goods__item goods__item--catalog" tabindex="0">
                   <div class="goods__actions">
                     <a href="#tobuy" class="goods__btn goods__btn--buy">Купить</a>
                     <a href="#tobookmark" class="goods__btn goods__btn--bookmark">В закладки</a>
@@ -350,8 +358,8 @@
         </div>
         <div class="footer-bottom">
           <div class="footer-bottom__wrapper">
-            <p class="footer-bottom__copyright">© 2010–2017 Компания «Техномарт»
-              Все права защищены</p>
+            <p class="footer-bottom__copyright">© 2010–2017 Компания&nbsp;«Техномарт»
+              Все&nbsp;права&nbsp;защищены</p>
             <div class="footer-bottom__socials socials">
               <ul class="socials__list">
                 <li class="socials__item">

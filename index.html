@@ -40,7 +40,7 @@
             <a class="user-nav__link user-nav__link--login" href="#login">Войти</a>
           </li>
           <li class="user-nav__register">
-            <a class="user-nav__link" href="#register">Регистрация</a>
+            <a class="user-nav__link user-nav__link--register" href="#register">Регистрация</a>
           </li>
         </ul>
       </div>
@@ -135,7 +135,7 @@
           <a class="section__link btn" href="catalog.html">Все популярные товары</a>
         </header>
         <ul class="goods__list">
-          <li class="goods__item goods__item--index">
+          <li class="goods__item goods__item--index" tabindex="0">
             <div class="goods__actions">
               <a href="#tobuy" class="goods__btn goods__btn--buy">Купить</a>
               <a href="#tobookmark" class="goods__btn goods__btn--bookmark">В закладки</a>
@@ -145,7 +145,7 @@
             <p class="goods__price goods__price--old">32500 р.</p>
             <p class="goods__price goods__price--new">25500 р.</p>
           </li>
-          <li class="goods__item goods__item--index">
+          <li class="goods__item goods__item--index" tabindex="0">
             <div class="goods__actions">
               <a href="#tobuy" class="goods__btn goods__btn--buy">Купить</a>
               <a href="#tobookmark" class="goods__btn goods__btn--bookmark">В закладки</a>
@@ -155,7 +155,7 @@
             <p class="goods__price goods__price--old">22500 р.</p>
             <p class="goods__price goods__price--new">15500 р.</p>
           </li>
-          <li class="goods__item goods__item--index">
+          <li class="goods__item goods__item--index" tabindex="0">
             <div class="goods__actions">
               <a href="#tobuy" class="goods__btn goods__btn--buy">Купить</a>
               <a href="#tobookmark" class="goods__btn goods__btn--bookmark">В закладки</a>
@@ -165,7 +165,7 @@
             <p class="goods__price goods__price--old">30500 р.</p>
             <p class="goods__price goods__price--new">25500 р.</p>
           </li>
-          <li class="goods__item goods__item--index goods__item--new">
+          <li class="goods__item goods__item--index goods__item--new" tabindex="0">
             <div class="goods__actions">
               <a href="#tobuy" class="goods__btn goods__btn--buy">Купить</a>
               <a href="#tobookmark" class="goods__btn goods__btn--bookmark">В закладки</a>
@@ -238,9 +238,9 @@
             <input class="services__input visually-hidden" type="radio" id="services-guarantee" name="services">
             <input class="services__input visually-hidden" type="radio" id="services-credit" name="services">
             <div class="services__list">
-              <label class="services__item services__item--delivery" for="services-delivery">Доставка</label>
-              <label class="services__item services__item--guarantee" for="services-guarantee">Гарантия</label>
-              <label class="services__item services__item--credit" for="services-credit">Кредит</label>
+              <label class="services__item services__item--delivery" for="services-delivery" tabindex="0">Доставка</label>
+              <label class="services__item services__item--guarantee" for="services-guarantee" tabindex="0">Гарантия</label>
+              <label class="services__item services__item--credit" for="services-credit" tabindex="0">Кредит</label>
             </div>
             <div class="services__info services__info--delivery">
               <h3 class="services__title">Доставка</h3>
@@ -274,7 +274,9 @@
         <div class="contacts">
           <h2 class="section__title section__title--other">Контакты</h2>
           <p class="section__text">Вы можете забрать товар сами, заехав в наш офис:</p>
-          <a class="contacts__map" href="#map"><img src="img/map-small.jpg" width="300" height="158" alt="Офис Техномарт"></a>
+          <a class="contacts__map" href="#map">
+            <img src="img/map-small.jpg" width="300" height="158" alt="Офис Техномарт">
+          </a>
           <a class="contacts__form btn" href="#form">Заблудились? Напишите нам!</a>
         </div>
       </section>
@@ -284,52 +286,50 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="footer-info">
-          <a class="page-logo page-logo--footer">Техномарт</a>
+          <a class="page-logo page-logo--footer" tabindex="0">Техномарт</a>
           <div class="footer-info__contacts">
             <p class="footer-info__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             <a class="footer-info__tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
           </div>
         </div>
         <div class="footer-nav">
-          <div class="footer-nav">
-            <ul class="footer-nav__second">
-              <li class="footer-nav__item">
-                <a class="footer-nav__link" href="#company">Компания</a>
-              </li>
-              <li class="footer-nav__item">
-                <a class="footer-nav__link" href="#news">Новости</a>
-              </li>
-              <li class="footer-nav__item">
-                <a class="footer-nav__link" href="catalog.html">Каталог</a>
-              </li>
-              <li class="footer-nav__item">
-                <a class="footer-nav__link" href="#delivery">Доставка</a>
-              </li>
-              <li class="footer-nav__item">
-                <a class="footer-nav__link" href="#contacts">Контакты</a>
-              </li>
-            </ul>
-            <ul class="footer-nav__promo">
-              <li class="footer-nav__item">
-                <a class="footer-nav__link footer-nav__link--promo" href="#materials">Материалы</a>
-              </li>
-              <li class="footer-nav__item">
-                <a class="footer-nav__link footer-nav__link--promo" href="#technics">Техника</a>
-              </li>
-              <li class="footer-nav__item">
-                <a class="footer-nav__link footer-nav__link--promo" href="#tools">Инструмент</a>
-              </li>
-              <li class="footer-nav__item">
-                <a class="footer-nav__link footer-nav__link--promo" href="#specials">Спецпредложения</a>
-              </li>
-            </ul>
-          </div>
+          <ul class="footer-nav__second">
+            <li class="footer-nav__item">
+              <a class="footer-nav__link" href="#company">Компания</a>
+            </li>
+            <li class="footer-nav__item">
+              <a class="footer-nav__link" href="#news">Новости</a>
+            </li>
+            <li class="footer-nav__item">
+              <a class="footer-nav__link" href="catalog.html">Каталог</a>
+            </li>
+            <li class="footer-nav__item">
+              <a class="footer-nav__link" href="#delivery">Доставка</a>
+            </li>
+            <li class="footer-nav__item">
+              <a class="footer-nav__link" href="#contacts">Контакты</a>
+            </li>
+          </ul>
+          <ul class="footer-nav__promo">
+            <li class="footer-nav__item">
+              <a class="footer-nav__link footer-nav__link--promo" href="#materials">Материалы</a>
+            </li>
+            <li class="footer-nav__item">
+              <a class="footer-nav__link footer-nav__link--promo" href="#technics">Техника</a>
+            </li>
+            <li class="footer-nav__item">
+              <a class="footer-nav__link footer-nav__link--promo" href="#tools">Инструмент</a>
+            </li>
+            <li class="footer-nav__item">
+              <a class="footer-nav__link footer-nav__link--promo" href="#specials">Спецпредложения</a>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <div class="footer-bottom__wrapper">
-          <p class="footer-bottom__copyright">© 2010–2017 Компания «Техномарт»
-            Все права защищены</p>
+          <p class="footer-bottom__copyright">© 2010–2017 Компания&nbsp;«Техномарт»
+            Все&nbsp;права&nbsp;защищены</p>
           <div class="footer-bottom__socials socials">
             <ul class="socials__list">
               <li class="socials__item">
@@ -395,7 +395,7 @@
 
     <section class="modal-map">
       <h2 class="modal-map__title visually-hidden">Карта расположения офиса «Техномарт»</h2>
-      <div class="modal-map__image" id="map">
+      <div id="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787253323!2d30.320858716385132!3d59.93871648187622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1537391478124" width="940" height="446" style="border:0" allowfullscreen></iframe>
       </div>
       <button class="modal-map__close modal-close" type="button">Закрыть</button>
