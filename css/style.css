@@ -186,9 +186,9 @@ input[type="radio"].visually-hidden {
   position: relative;
   display: inline-block;
   width: 150px;
-  padding: 11px 15px;
+  padding: 12px 15px;
   font-size: 17px;
-  line-height: 18px;
+  line-height: 17px;
   color:#ffffff;
   background-color: #293449;
   box-sizing: border-box;
@@ -337,7 +337,7 @@ input[type="radio"].visually-hidden {
 .user-nav {
   width: 300px;
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -352,7 +352,7 @@ input[type="radio"].visually-hidden {
   display: inline-block;
   min-height: 46px;
   margin-left: 10px;
-  padding: 12px 24px 13px;
+  padding: 13px 24px 12px;
   font-size: 21px;
   line-height: 21px;
   color: #000000;
@@ -1058,7 +1058,7 @@ input[type="radio"].visually-hidden {
 .goods__btn--buy:active {
   background-color: #518534;
   border: 3px solid #518534;
-  border-bottom-color: none;
+  border-bottom-color: transparent;
 }
 
 .goods__btn--bookmark {
@@ -1397,7 +1397,7 @@ input[type="radio"].visually-hidden {
 .footer-nav__promo {
   display: flex;
   justify-content: flex-end;
-  margin: 35px 0;
+  margin: 36px 0;
   padding: 0;
   list-style: none;
   flex-wrap: wrap;
@@ -2331,6 +2331,81 @@ input[type="radio"].visually-hidden {
 	z-index: 10;
 }
 
+@keyframes bounce {
+  0% {
+    transform: translateX(-50%) translateY(-500%);
+    -webkit-transform: translateX(-50%) translateY(-500%);
+    -moz-transform: translateX(-50%) translateY(-500%);
+    -ms-transform: translateX(-50%) translateY(-500%);
+    -o-transform: translateX(-50%) translateY(-500%);
+}
+
+  70% {
+    transform: translateX(-50%) translateY(-25%);
+    -webkit-transform: translateX(-50%) translateY(-25%);
+    -moz-transform: translateX(-50%) translateY(-25%);
+    -ms-transform: translateX(-50%) translateY(-25%);
+    -o-transform: translateX(-50%) translateY(-25%);
+}
+
+  90% {
+    transform: translateX(-50%) translateY(-40%);
+    -webkit-transform: translateX(-50%) translateY(-40%);
+    -moz-transform: translateX(-50%) translateY(-40%);
+    -ms-transform: translateX(-50%) translateY(-40%);
+    -o-transform: translateX(-50%) translateY(-40%);
+}
+
+  100% {
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+}
+}
+
 .modal-show {
   display: flex;
+  animation: bounce 0.5s;
+  -webkit-animation: bounce 0.5s;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+}
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-49%) translateY(-50%);
+    -webkit-transform: translateX(-49%) translateY(-50%);
+    -moz-transform: translateX(-49%) translateY(-50%);
+    -ms-transform: translateX(-49%) translateY(-50%);
+    -o-transform: translateX(-49%) translateY(-50%);
+}
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(-51%) translateY(-50%);
+    -webkit-transform: translateX(-51%) translateY(-50%);
+    -moz-transform: translateX(-51%) translateY(-50%);
+    -ms-transform: translateX(-51%) translateY(-50%);
+    -o-transform: translateX(-51%) translateY(-50%);
+}
+}
+
+.modal-error {
+  animation: shake 0.5s;
+  -webkit-animation: shake 0.5s;
 }
